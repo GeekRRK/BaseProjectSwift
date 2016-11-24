@@ -20,28 +20,33 @@ class BPUtil: NSObject {
     }
     
     /*
-     func colorWithHexString(string2Convert: String) -> UIColor {
-     var cString = string2Convert.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
-     if cString.characters.count < 6 {
-     return UIColor.white
-     }
-     if cString.hasPrefix("#") {
-     cString = cString.substring(from: cString.index(after: 1))
-     }
-     if cString.characters.count != 6 {
-     return UIColor.white
-     }
-     
-     var range: NSRange
-     range.location = 0
-     range.length = 2
-     let rString = cString .substring(with: range)
-     range.location = 2
-     let gString = cString.substring(with: range)
-     range.location = 4
-     let bString = cString.substring(with: range)
-     
-     let r, g, b: UInt
-     }
+    func colorWithHexString(string2Convert: String) -> UIColor {
+        var cString = string2Convert.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
+        if cString.characters.count < 6 {
+            return UIColor.white
+        }
+        
+        let index = cString.index(cString.startIndex, offsetBy: 0)
+        cString = cString.substring(from: index);
+        
+        if cString.hasPrefix("#") {
+            let index = cString.index(cString.startIndex, offsetBy: 1)
+            cString = cString.substring(from: cString.index(after: index))
+        }
+        if cString.characters.count != 6 {
+            return UIColor.white
+        }
+        
+        var range: NSRange
+        range.location = 0
+        range.length = 2
+        let rString = cString.substring(with: range)
+        range.location = 2
+        let gString = cString.substring(with: range)
+        range.location = 4
+        let bString = cString.substring(with: range)
+        
+        let r, g, b: UInt
+    }
      */
 }
