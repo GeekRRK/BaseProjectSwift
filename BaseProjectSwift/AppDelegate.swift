@@ -13,9 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let BP_NAVBAR_TITLE_FONTSIZE: CGFloat = 19
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        setRootVC()
+        
         return true
     }
 
@@ -40,7 +44,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
+    func setRootVC() {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.backgroundColor = UIColor.white
+        window?.makeKeyAndVisible()
+        
+        let vc1 = ViewController()
+        let vc2 = ViewController()
+        let vc3 = ViewController()
+        
+        let vcs = [vc1, vc2, vc3]
+        let titles = [BPUtil.localStr("Homepage"), BPUtil.localStr("Video"), BPUtil.localStr("Me")]
+        let tabItemImages = ["tabbar_homepage", "tabbar_video", "tabbar_me"]
+        
+        var navCtrls = [UIViewController]()
+        for i in 0..<vcs.count {
+            let itemVC = vcs[i]
+            itemVC.title = titles[i]
+            let navVC = UINavigationController(rootViewController: itemVC)
+            navVC.navigationBar.barTintColor = UIColor.black
+            navVC.navigationBar.tintColor = UIColor.white
+            navVC.navigationBar.isTranslucent = false
+            navVC.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: BP_NAVBAR_TITLE_FONTSIZE), NSForegroundColorAttributeName: UIColor.white]
+            
+            let imgName = tabItemImages[i]
+            let selImgName = "\(tabItemImages[i])_sel"
+            navVC.tabBarItem = UITabBarItem(title: titles[i], image: UIImage(named: imgName), selectedImage: UIImage(named: selImgName))
+            
+            UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.white], for: .normal)
+            UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.green], for: .selected)
+            
+            navCtrls.append(navVC)
+        }
+        
+        let tabBarVC = UITabBarController()
+        tabBarVC.viewControllers = navCtrls
+        tabBarVC.tabBar.barTintColor = UIColor.black
+        tabBarVC.tabBar.tintColor = UIColor.green
+        tabBarVC.tabBar.isTranslucent = false
+        
+        window?.rootViewController = tabBarVC
+    }
+    
 }
 

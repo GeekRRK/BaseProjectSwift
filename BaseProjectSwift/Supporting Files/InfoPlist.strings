@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  BaseProjectSwift
+
+  Created by UGOMEDIA on 2016/11/24.
+  Copyright © 2016年 GeekRRK. All rights reserved.
+*/
+
+CFBundleDisplayName = "基础工程";
