@@ -1,3 +1,3 @@
-# BaseProjectSwift
+# PrototypeSwift
 
-Swift version of [BaseProject](https://github.com/GeekRRK/BaseProject)
+Swift version of [Prototype](https://github.com/GeekRRK/Prototype)
