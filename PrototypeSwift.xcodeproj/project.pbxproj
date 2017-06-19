@@ -11,7 +11,6 @@
 		612180891EF51C3F00979A5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6121807E1EF51C3F00979A5E /* AppDelegate.swift */; };
 		6121808A1EF51C3F00979A5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 612180801EF51C3F00979A5E /* Assets.xcassets */; };
 		6121808B1EF51C3F00979A5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 612180811EF51C3F00979A5E /* LaunchScreen.storyboard */; };
-		6121808C1EF51C3F00979A5E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 612180831EF51C3F00979A5E /* Info.plist */; };
 		6121808D1EF51C3F00979A5E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 612180841EF51C3F00979A5E /* InfoPlist.strings */; };
 		6121808E1EF51C3F00979A5E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 612180851EF51C3F00979A5E /* Localizable.strings */; };
 		6121808F1EF51C3F00979A5E /* BPUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612180871EF51C3F00979A5E /* BPUtil.swift */; };
@@ -256,7 +255,6 @@
 				6121808A1EF51C3F00979A5E /* Assets.xcassets in Resources */,
 				6121808D1EF51C3F00979A5E /* InfoPlist.strings in Resources */,
 				6121808B1EF51C3F00979A5E /* LaunchScreen.storyboard in Resources */,
-				6121808C1EF51C3F00979A5E /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
