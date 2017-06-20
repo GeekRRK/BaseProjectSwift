@@ -50,9 +50,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = UIColor.white
         window?.makeKeyAndVisible()
         
-        let vc1 = ViewController()
-        let vc2 = ViewController()
-        let vc3 = ViewController()
+        let vc1 = UIViewController()
+        let vc2 = UIViewController()
+        let vc3 = UIViewController()
         
         let vcs = [vc1, vc2, vc3]
         let titles = [BPUtil.localStr("Homepage"), BPUtil.localStr("Video"), BPUtil.localStr("Me")]
