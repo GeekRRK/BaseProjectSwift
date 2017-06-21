@@ -1,5 +1,5 @@
 //
-//  BPUtil.swift
+//  PTUtil.swift
 //  BaseProjectSwift
 //
 //  Created by GeekRRK on 2016/11/24.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BPUtil: NSObject {
+class PTUtil: NSObject {
     class var green: UIColor {
         get {
             return UIColor.green

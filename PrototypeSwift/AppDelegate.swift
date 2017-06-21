@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    let BP_NAVBAR_TITLE_FONTSIZE: CGFloat = 19
+    let PT_NAVBAR_TITLE_FONTSIZE: CGFloat = 19
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -55,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let vc3 = UIViewController()
         
         let vcs = [vc1, vc2, vc3]
-        let titles = [BPUtil.localStr("Homepage"), BPUtil.localStr("Video"), BPUtil.localStr("Me")]
+        let titles = [PTUtil.localStr("Homepage"), PTUtil.localStr("Video"), PTUtil.localStr("Me")]
         let tabItemImages = ["tabbar_homepage", "tabbar_video", "tabbar_me"]
         
         var navCtrls = [UIViewController]()
@@ -66,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             navVC.navigationBar.barTintColor = UIColor.black
             navVC.navigationBar.tintColor = UIColor.white
             navVC.navigationBar.isTranslucent = false
-            navVC.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: BP_NAVBAR_TITLE_FONTSIZE), NSForegroundColorAttributeName: UIColor.white]
+            navVC.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: PT_NAVBAR_TITLE_FONTSIZE), NSForegroundColorAttributeName: UIColor.white]
             
             let imgName = tabItemImages[i]
             let selImgName = "\(tabItemImages[i])_sel"
