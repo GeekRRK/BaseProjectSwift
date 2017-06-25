@@ -66,14 +66,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             navVC.navigationBar.barTintColor = UIColor.black
             navVC.navigationBar.tintColor = UIColor.white
             navVC.navigationBar.isTranslucent = false
-            navVC.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: PT_NAVBAR_TITLE_FONTSIZE), NSForegroundColorAttributeName: UIColor.white]
+            navVC.navigationBar.titleTextAttributes = [NSAttributedStringKey.font.rawValue: UIFont.systemFont(ofSize: PT_NAVBAR_TITLE_FONTSIZE), NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]
             
             let imgName = tabItemImages[i]
             let selImgName = "\(tabItemImages[i])_sel"
             navVC.tabBarItem = UITabBarItem(title: titles[i], image: UIImage(named: imgName), selectedImage: UIImage(named: selImgName))
             
-            UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.white], for: .normal)
-            UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.green], for: .selected)
+            UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: .normal)
+            UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.green], for: .selected)
             
             navCtrls.append(navVC)
         }
